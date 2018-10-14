@@ -7,8 +7,8 @@ __pycache__/
 *.so
 
 # CNN stuff
-cnn/dataset/
-cnn/logs/
+./cnn/dataset/
+./cnn/logs/
 
 # Distribution / packaging
 .Python
