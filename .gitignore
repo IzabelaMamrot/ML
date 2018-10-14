@@ -6,10 +6,6 @@ __pycache__/
 # C extensions
 *.so
 
-# CNN stuff
-./cnn/dataset/
-./cnn/logs/
-
 # Distribution / packaging
 .Python
 build/
