@@ -8,13 +8,19 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<style>
-	body {
-	background: url("http://www.dataversity.net/wp-content/uploads/2014/08/robobrain.png?x38402") no-repeat center center fixed;
-	}
 
+body, html {
+  background: url("https://nofluffjobs.com/blog/wp-content/uploads/2018/08/deep-learning.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 	h2 {
-	    color: navy;
+	    color: white;
 	    text-align:center;
+		font-family: Arial, Helvetica, sans-serif;
+		font-weight:bold;
 	}
 
 	.center1 {
@@ -29,36 +35,42 @@
 
 	.czcionka {
 	font-size: 36px;
+		color: black;
 	}
 	.box {
-		background-color: rgba(113, 96, 255, 0.5);
+		background-color: rgba(113, 152, 197, 0.9);
 		border-radius: 25px;
-		width: 241px;
-		margin-left: 566px;
-		margin-top: 15px;
+		width: 255px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 150px;
 		padding: 23px;
-		border: 5px solid #0009;
+		border: 9px solid #0009;
+		color:black;
 }
 	.box2 {
-		    background-color: rgba(251, 250, 191);
+		    background-color: rgba(113, 152, 197, 0.5);
 			border-radius: 25px;
-			width: 455px;
-			margin-left: 483px;
+			width: auto;
+			margin-left: auto;
+			margin-right: auto;
 			margin-top: 84px;
 			padding: 20px;
-			border: 5px solid #0009;
+			border: 5px solid black;
 }
 	</style>
     </head>
+
 <body>
 	<div class="container container_my" >
-		<h2>Projekt inżynierski - odróżnianie krajobrazu od pomieszczenia</h2>
+		<h2 style="font-size:40px;"> Projekt inżynierski</h2>
+		<h2 style="font-size:40px;"> "Odróżnianie krajobrazu od pomieszczenia"</h2>
 	</div>
 		<div class="box">
 				<form method=POST enctype=multipart/form-data action="{{ url_for('upload') }}" class="center1">
 					<input type=file name=photo class="srodek" class="">
-					<input type="submit" class="btn btn-primary">
-				</form>
+					<input type="submit">
+</form>
 		</div>
 		{% if photoSend==True %}
 			<div class="box2">

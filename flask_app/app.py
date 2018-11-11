@@ -1,7 +1,10 @@
-from flask import Flask, render_template, flash, request, url_for
-from flask_uploads import UploadSet, configure_uploads, IMAGES
+from flask import Flask, render_template, flash, request, url_for, redirect
+from flask_uploads import UploadSet, configure_uploads, IMAGES, patch_request_class
 import os
 import tensorflow as tf
+from flask_wtf.file import FileField, FileRequired, FileAllowed
+from wtforms import SubmitField
+from flask_wtf import FlaskForm
 from decimal import *
 import random
 import urllib.request
@@ -18,6 +21,7 @@ if not os.path.isdir('./static/img'):
 
 # App config.
 app = Flask(__name__)
+
 
 photos = UploadSet('photos', IMAGES)
 app.config['UPLOADED_PHOTOS_DEST'] = 'static/img'
@@ -66,10 +70,10 @@ def classify(image_path):
             wynik = round(score*100)
 
             print('%s (score = %.5f)' % (human_string, score))
-            return str(human_string) + " " + " Prawdopodobieństwo wynosi: " + str(wynik) +"%"
+            return str(human_string) + ". Prawdopodobieństwo wynosi: " + str(wynik) +"%"
 
 
-classify('2.jpg')
+# classify('2.jpg')
 
 if __name__ == "__main__":
     app.run(debug=True)
