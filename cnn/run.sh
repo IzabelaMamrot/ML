@@ -1,6 +1,6 @@
 echo Add a comment
 read user_comment
-steps=100000
+steps=50
 date=`date '+%Y-%m-%d %H:%M:%S'`
 python3 train.py > test.txt \
   --bottleneck_dir=logs/bottlenecks \
